@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="myDiv"></div>
+
+<script>
+    // document.write('<h1>Hello from Js</h1>')
+    // var h1 = '<h1> hello from js 2</h2>'
+    // document.write(h1)
+
+    // var x = document.createElement("h1")
+    // x.textContent = "Another H1 tag"
+    // x.style.color = 'red'
+    // x.style.backgroundColor="yellow"
+    // x.className="heading"
+    // document.body.appendChild(x)
+
+    // var btn = document.createElement("button")
+    // btn.textContent='click'
+    // btn.onclick = function(){
+    //     alert("Button is clicked")
+    // }
+    // document.getElementById('myDiv').appendChild(btn)
+
+    var drinks = ["tea","coffee","milk","apple Juice"]
+
+    var ul = document.createElement("ul")
+    for(var i=0;i<drinks.length;i++){
+        var li = document.createElement("li")
+        li.textContent = drinks[i]
+    }
+
+</script>
+</body>
+</html>
