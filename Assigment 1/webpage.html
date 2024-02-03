@@ -11,21 +11,43 @@
 
   <!-- Bootstrap JS and dependencies -->
   <script defer src="css/bootstrap.min.js"></script>
+
   <style>
+    .nav-item {
+      margin-right: 25px;
+      /* Adjust the margin between items as needed */
+    }
 
-  .nav-item{
-    margin-right: 25px; /* Adjust the margin between items as needed */
-  }
+    .navbar-nav .nav-link {
+      padding: 0.5rem 1rem;
+      /* Add padding to the nav links */
+      border: 3px solid transparent;
+      /* Set a transparent border initially */
+      border-radius: 5px;
+    }
 
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem; /* Add padding to the nav links */
-    border: 3px solid transparent; /* Set a transparent border initially */
-    border-radius: 5px;
-  }
+    .navbar-nav .nav-link.login {
+      border-color: blue;
+      /* Add blue border to the Login link */
+    }
 
-  .navbar-nav .nav-link.login {
-    border-color: blue; /* Add blue border to the Login link */
-  }
+    .bg-dark-blue {
+      background-color: #031b34;
+      /* Dark blue color */
+    }
+
+    #innovation {
+      font-size: 70px;
+    }
+
+    #lorem2 {
+      font-size: large;
+    }
+
+    .underline-h1 {
+      border-bottom: 2px solid blue;
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -47,28 +69,9 @@
             <a class="nav-link active fw-bold fs-5" aria-current="page" href="#">Edu4all</a>
           </li>
 
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li> -->
+
         </ul>
-        <!-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link active fw-bold" href="#">Home</a>
@@ -90,8 +93,57 @@
 
 
   <!-- Container -->
-  
 
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-md-6 bg-dark-blue text-white">
+        <p class="mx-4 my-5" id="innovation">Innovation and Discovery</p>
+        <p id="lorem2" class="mx-4 my-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis deleniti
+          doloremque tempora ea voluptas numquam vero voluptates nulla, eligendi mollitia commodi repudiandae repellat
+          velit ipsam asperiores perferendis libero. Ducimus, excepturi.</p>
+        <button class="m-4 p-3 rounded-2 bg-primary text-white border border-primary">Sign Up For Execution</button>
+        <button class="m-4 p-3 rounded-2 bg-dark-blue text-white border-white">Learn More</button>
+      </div>
+      <div class="col-md-6">
+        <img src="banner-1.jpg" class="img-fluid" alt="Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- container 2 -->
+
+  <div class="container-fluid p-0 mt-5">
+    <div class="col">
+      <div class="d-flex align-items-center justify-content-center">
+        <h1 class="underline-h1 p-2">Statistics</h1>
+      </div>
+      <div class="mt-2 d-flex align-items-center justify-content-center">
+        <p class="text-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vero et magni?</p>
+      </div>
+      <div class="mt-4 d-flex flex-row">
+        <div>
+          
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-eM5SmSd1I9aqQA9q2pWlpPBnP1L4uBhLVEH49Npj8HdEN/LQ/m2i9A/Sn9VIaP8J"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
