@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Buttons</title>
+    <style>
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="colorDiv"></div>
+
+    <script>
+        // JS array of color names
+        var colorNames = ["Red", "Green", "Blue", "Yellow", "Purple", "Orange"];
+
+        // Function to change the background color of the div
+        function changeColor(color) {
+            document.getElementById("colorDiv").style.backgroundColor = color;
+        }
+
+        // Dynamically create buttons based on array elements
+        var buttonsContainer = document.createElement("div");
+
+        colorNames.forEach(function (color) {
+            var button = document.createElement("button");
+            button.textContent = color;
+            button.style.backgroundColor = color.toLowerCase(); // set button background color
+            button.addEventListener("click", function () {
+                changeColor(color.toLowerCase()); // change div background color on button click
+            });
+            buttonsContainer.appendChild(button);
+        });
+
+        // Append buttons container to the body
+        document.body.appendChild(buttonsContainer);
+    </script>
+
+</body>
+</html>

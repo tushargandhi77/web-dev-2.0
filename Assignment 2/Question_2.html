@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -13,13 +29,39 @@
             {roll:2,name:"ropar",mobile:934323234,email:"gandhitushar405@gmail.com"},
             {roll:3,name:"jagdish",mobile:9434323434,email:"gandhitushar405@gmail.com"},
             {roll:4,name:"kamar",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:5,name:"harish",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:6,name:"gobar",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:7,name:"myhero",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:8,name:"heroine",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:9,name:"Dj opend",mobile:3434323234,email:"gandhitushar405@gmail.com"},
-            {roll:10,name:"gopi bahu",mobile:3434323234,email:"gandhitushar405@gmail.com"},
+            {roll:5,name:"harish",mobile:3434323234,email:"gandhitushar48605@gmail.com"},
+            {roll:6,name:"gobar",mobile:3434323234,email:"gobarar46305@gmail.com"},
+            {roll:7,name:"myhero",mobile:3434323234,email:"Myhero40325@gmail.com"},
+            {roll:8,name:"heroine",mobile:3434323234,email:"ganheroiner405@gmail.com"},
+            {roll:9,name:"Dj opend",mobile:3434323234,email:"ganoeone4035@gmail.com"},
+            {roll:10,name:"gopi bahu",mobile:3434323234,email:"gopibahu40125@gmail.com"},
         ]
+
+        var table = document.createElement('table')
+        table.className = "student"
+        var tr = document.createElement('tr')
+        var keys = Object.keys(Student[0])
+
+        for(var i = 0;i<keys.length;i++){
+            var th = document.createElement('th')
+            th.textContent = keys[i]
+            tr.appendChild(th)
+        }
+
+        table.appendChild(tr)
+
+        for(var i=0;i<Student.length;i++){
+            var tr = document.createElement('tr')
+
+            for(var j = 0;j<keys.length;j++){
+                var td = document.createElement('td')
+                td.textContent = Student[i][keys[j]]
+                tr.appendChild(td)
+            }
+            table.appendChild(tr)
+        }
+
+        document.body.appendChild(table)
     </script>
 </body>
 </html>
