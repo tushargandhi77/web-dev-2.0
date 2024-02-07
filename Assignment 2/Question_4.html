@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Working Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            padding: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Working Experience</h2>
+
+    <table id="experienceTable">
+        <thead>
+            <tr>
+                <th>Organization</th>
+                <th>Designation</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="organization[]" required></td>
+                <td><input type="text" name="designation[]" required></td>
+                <td><input type="text" name="duration[]" required></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" onclick="addRow()">Add More</button>
+    <button type="button" onclick="submitData()">Submit</button>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("experienceTable").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(table.rows.length);
+
+            var cells = [];
+            for (var i = 0; i < 3; i++) {
+                cells[i] = newRow.insertCell(i);
+                cells[i].innerHTML = `<input type="text" name="organization[]" required>`;
+            }
+        }
+
+        function submitData() {
+            var table = document.getElementById("experienceTable").getElementsByTagName('tbody')[0];
+            var rows = table.getElementsByTagName('tr');
+            
+            var data = [];
+
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('input');
+                var rowData = {
+                    Organization: cells[0].value,
+                    Designation: cells[1].value,
+                    Duration: cells[2].value
+                };
+
+                data.push(rowData);
+            }
+
+            console.log(data);
+        }
+    </script>
+
+</body>
+</html>

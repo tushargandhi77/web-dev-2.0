@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .todo {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .todo span {
+            flex-grow: 1;
+        }
+
+        .delete-btn {
+            cursor: pointer;
+            color: #ff3333;
+            margin-left: 10px;
+        }
+    </style>
+    <title>TODO App</title>
+</head>
+<body>
+
+    <h2>TODO List</h2>
+
+    <form id="todoForm">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="button" onclick="addTodo()">Add TODO</button>
+    </form>
+
+    <div id="todoList"></div>
+
+    <script>
+        function addTodo() {
+            var task = document.getElementById("task").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+
+            if(task && date && time){
+                var todoList = document.getElementById('todoList')
+
+
+                var tododiv = document.createElement('div')
+                tododiv.className = "todo"
+                tododiv.innerHTML = `<span>${task} - ${date} ${time}</span><span class="delete-btn" onclick="deleteTodo(this)">Delete</span>`
+                
+                todoList.appendChild(tododiv)
+
+                document.getElementById("task") = ""
+                document.getElementById("date") = ""
+                document.getElementById("time") = ""
+            }
+        }
+        function deleteTodo(element) {
+            var todoDiv = element.closest(".todo");
+            todoDiv.remove();
+        }
+    </script>
+
+
+</body>
+</html>
