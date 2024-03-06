@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "branch": "Computer Science",
+      "cgpa": 3.5
+    },
+    {
+      "id": "3",
+      "name": "Bob Johnson",
+      "branch": "Mechanical Engineering",
+      "cgpa": 3.2
+    },
+    {
+      "id": "f9cd",
+      "name": "TUSHAR GANDHI",
+      "branch": "cse",
+      "cgpa": 35
+    }
+  ]
+}
