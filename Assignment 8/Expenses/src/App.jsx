@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './layout/Layout';
 import One from './pages/One'
 import Four from './pages/Four'
+import Two from './pages/Two';
 function App() {
   
   const router = createBrowserRouter([
@@ -13,7 +14,8 @@ function App() {
       element: <Layout />,
       children: [
         { path: "/one", element: <One />},
-        { path: "/four", element: <Four />}
+        { path: "/two", element: <Two />},
+        { path: "/four", element: <Four />},
       ]
     }
   ])
