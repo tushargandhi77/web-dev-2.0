@@ -6,9 +6,11 @@ export default function layout() {
   return (
     <>
     <Navbar/>
-    <main className='container my-2'>
+    <div className="container">
+    <main className='container mt-5'>
         <Outlet/>
     </main>
+    </div>
     </>
   )
 }
