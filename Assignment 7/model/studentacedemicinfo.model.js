@@ -12,15 +12,15 @@ const StudentAcedemicInfoSchema = mongoose.Schema({
     },
     marks:{
         math:{
-            type:number,
+            type:"number",
             required:true
         },
         science:{
-            type:number,
+            type:"number",
             required:true
         },
         history:{
-           type:number,
+            type:"number",
            required:true 
         }
     }
