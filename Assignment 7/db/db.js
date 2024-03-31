@@ -12,4 +12,4 @@ async function dbconnect(){
     }
 }
 
-dbconnect()
+module.exports = dbconnect

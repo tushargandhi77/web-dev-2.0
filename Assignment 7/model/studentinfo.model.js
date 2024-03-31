@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const studentInfoSchema = new mongoose.Schema({
     name:{
-        type:string,
+        type:String,
         required:true,
     },
     rollNo:{
@@ -28,5 +28,5 @@ const studentInfoSchema = new mongoose.Schema({
 
 const StudentInfo = mongoose.model('StudentInfo',studentInfoSchema)
 
-model.exports = StudentInfo
+module.exports = StudentInfo
 
