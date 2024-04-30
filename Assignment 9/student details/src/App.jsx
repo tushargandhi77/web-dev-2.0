@@ -1,28 +1,25 @@
-import './App.css'
+import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './layout/Layout';
-import One from './pages/One'
-import Four from './pages/Four'
-import Two from './pages/Two';
-// import Five from "./pages/Five";
-
+import './App.css'
+import Layout from './Layout/Layout'
+import StudentInfo from './Pages/Studentinfo'
+import StudentAcademicInfo from './Pages/Studentacdemic'
 function App() {
-  
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "/one", element: <One />},
-        { path: "/two", element: <Two />},
-        { path: "/four", element: <Four />},
+        { path: "/studentinfo", element: <StudentInfo />},
+        { path: "/studentacademic", element: <StudentAcademicInfo />}
       ]
     }
   ])
 
   return <RouterProvider router={router} />
-}
+  }
+
 
 export default App
